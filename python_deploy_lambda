@@ -5,6 +5,6 @@
 # 1. ARN of Lambda
 
 python3 -m pip install -t package -r requirements.txt
-zip -r lambda.zip package
+zip -FSr lambda.zip package
 zip -urj lambda.zip src/*
 aws lambda update-function-code --function-name $1 --zip-file fileb://lambda.zip
